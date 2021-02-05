@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- this is an opening tag for out first FTML element -->
+
+  <head>
+    <!-- head is a child of html, html is the parent of head-->
+    <meta charset="utf-8"> <!-- the openening tag of meta serves as the closing tag-->
+    <title>
+      Shut The Box
+    </title>
+    <script src="help.js" defer> </script>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Shut The Box</h1>
+    </header>
+
+    <main>
+      <h2>The Rules</h2>
+
+      <ol type='i'>
+        <li>Each turn, you role the dice (or die) and select 1 or more boxes which sum to the value of your roll.</li>
+        <li>You will not be allowed to pick the boxes which you choose on subsequent turns.</li>
+        <li>When the sum of the boxes which are left is less than or requal to 6, you will only roll a single die.</li>
+        <li>When you cannot make a move or you give up, the sum of the boxes which are left gives your score</li>
+        <li>Lower scores are better and a score of 0 is called "shutting the box".</li>
+      </ol>
+
+      <h2>
+        Dice roll
+      </h2>
+
+      <fieldset>
+
+
+        <input type="button" value="Roll dice" onclick="generate_roll()" id = "button_roll">
+
+        Result: <span id = "result_span"></span>
+
+
+      </fieldset>
+
+
+      <h2>
+        Box selection
+      </h2>
+
+      <table>
+        <tr>
+          <td><span>1</span></td>
+          <td><span>2</span></td>
+          <td><span>3</span></td>
+          <td><span>4</span></td>
+          <td><span>5</span></td>
+          <td><span>6</span></td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+          <td><input type="checkbox"> </td>
+
+        </tr>
+      </table>
+
+
+
+      <fieldset>
+        <input type="button" value="Submit box selection" onclick="check_submission()" id = "button_submit">
+        <input type="button" value="I give up/I can't make a valid move" onclick="finish()">
+
+      </fieldset>
+
+
+
+    </main>
+
+    <footer>
+      <hr>
+      <small>
+        &copy; Tait Taniguchi, 2021
+      </small>
+    </footer>
+  </body>
+
+</html>
+
+
